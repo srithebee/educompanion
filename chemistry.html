@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP Chemistry - EduCompanion</title>
+    <meta name="description" content="Free AP Chemistry notes, practice problems, and study guides covering atomic structure, chemical reactions, and thermodynamics">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        secondary: {
+                            50: '#faf5ff',
+                            100: '#f3e8ff',
+                            200: '#e9d5ff',
+                            300: '#d8b4fe',
+                            400: '#c084fc',
+                            500: '#a855f7',
+                            600: '#9333ea',
+                            700: '#7e22ce',
+                            800: '#6b21a8',
+                            900: '#581c87',
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="../index.html" class="flex items-center space-x-3">
+                    <img src="../Public/logo.jpg" alt="EduCompanion Logo" class="h-10 w-auto object-contain" style="width: 50px; height: auto;">
+                    <span class="text-2xl font-bold text-gradient">EduCompanion</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="../index.html" class="px-4 py-2 text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-lg transition-colors duration-200 font-medium">Home</a>
+                    <a href="../ap-subjects.html" class="px-4 py-2 text-primary-600 bg-primary-50 rounded-lg font-medium">AP Subjects</a>
+                    <a href="../honors-test-prep.html" class="px-4 py-2 text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-lg transition-colors duration-200 font-medium">Honors & Test Prep</a>
+                    <a href="../about.html" class="px-4 py-2 text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-lg transition-colors duration-200 font-medium">About</a>
+                    <a href="../contact.html" class="px-4 py-2 text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-lg transition-colors duration-200 font-medium">Contact</a>
+                    <div id="quick-links-container" class="relative">
+                        <button id="quick-links-button" class="px-4 py-2 text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-lg transition-colors duration-200 font-medium flex items-center space-x-1">
+                            <span>Quick Links</span>
+                            <svg class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div id="quick-links-dropdown" class="hidden absolute right-0 top-full pt-2 w-48">
+                            <div class="bg-white rounded-lg shadow-lg py-2 border border-gray-100">
+                                <a href="https://www.instagram.com/educompanion.1/" target="_blank" rel="noopener noreferrer" class="block px-4 py-2 text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition-colors duration-200">Instagram</a>
+                                <a href="https://www.tiktok.com/@educompanion" target="_blank" rel="noopener noreferrer" class="block px-4 py-2 text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition-colors duration-200">TikTok</a>
+                                <a href="https://discord.com/invite/sftsx5My" target="_blank" rel="noopener noreferrer" class="block px-4 py-2 text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition-colors duration-200">Discord</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden py-4 border-t border-gray-200">
+                <a href="../index.html" class="block px-4 py-2 text-gray-700 hover:bg-primary-50 hover:text-primary-600 rounded-lg transition-colors duration-200">Home</a>
+                <a href="../ap-subjects.html" class="block px-4 py-2 text-primary-600 bg-primary-50 rounded-lg">AP Subjects</a>
+                <a href="../honors-test-prep.html" class="block px-4 py-2 text-gray-700 hover:bg-primary-50 hover:text-primary-600 rounded-lg transition-colors duration-200">Honors & Test Prep</a>
+                <a href="../about.html" class="block px-4 py-2 text-gray-700 hover:bg-primary-50 hover:text-primary-600 rounded-lg transition-colors duration-200">About</a>
+                <a href="../contact.html" class="block px-4 py-2 text-gray-700 hover:bg-primary-50 hover:text-primary-600 rounded-lg transition-colors duration-200">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-100 py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="flex" aria-label="Breadcrumb">
+                <ol class="flex items-center space-x-2 text-sm">
+                    <li><a href="../index.html" class="text-gray-500 hover:text-primary-600">Home</a></li>
+                    <li><span class="text-gray-400">/</span></li>
+                    <li><a href="../ap-subjects.html" class="text-gray-500 hover:text-primary-600">AP Subjects</a></li>
+                    <li><span class="text-gray-400">/</span></li>
+                    <li><a href="science.html" class="text-gray-500 hover:text-primary-600">Science</a></li>
+                    <li><span class="text-gray-400">/</span></li>
+                    <li class="text-gray-900 font-medium">AP Chemistry</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Page Content -->
+    <div class="min-h-screen py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-4 lg:gap-8">
+                <!-- Sidebar / Table of Contents -->
+                <aside class="hidden lg:block lg:col-span-1">
+                    <div class="sticky top-24 bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+                        <h3 class="text-lg font-bold text-gray-900 mb-4">Table of Contents</h3>
+                        <nav class="space-y-2">
+                            <a href="#overview" class="block text-gray-600 hover:text-primary-600 transition-colors">Overview</a>
+                            <a href="#units" class="block text-gray-600 hover:text-primary-600 transition-colors">Units & Topics</a>
+                            <a href="#notes" class="block text-gray-600 hover:text-primary-600 transition-colors">Notes</a>
+                            <a href="#practice" class="block text-gray-600 hover:text-primary-600 transition-colors">Practice Questions</a>
+                            <a href="#study-guides" class="block text-gray-600 hover:text-primary-600 transition-colors">Study Guides</a>
+                        </nav>
+                    </div>
+                </aside>
+
+                <!-- Main Content -->
+                <main class="lg:col-span-3">
+                    <!-- Page Title & Description -->
+                    <div id="overview" class="mb-12">
+                        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">AP Chemistry</h1>
+                        <p class="text-xl text-gray-600 leading-relaxed mb-6">
+                            AP Chemistry explores the fundamental principles of chemistry including atomic structure, intermolecular forces and bonding, chemical reactions, kinetics, thermodynamics, and equilibrium. This course prepares you for the AP Chemistry exam and provides a strong foundation for college-level chemistry.
+                        </p>
+                    </div>
+
+                    <!-- Units & Topics -->
+                    <section id="units" class="mb-12">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">Units & Topics</h2>
+                        <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+                            <div class="space-y-4">
+                                <div class="border-l-4 border-primary-500 pl-4">
+                                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Unit 1: Atomic Structure and Properties</h3>
+                                    <ul class="list-disc list-inside text-gray-600 space-y-1 ml-4">
+                                        <li>Moles and molar mass</li>
+                                        <li>Mass spectroscopy of elements</li>
+                                        <li>Elemental composition of pure substances</li>
+                                        <li>Composition of mixtures</li>
+                                        <li>Atomic structure and electron configuration</li>
+                                    </ul>
+                                </div>
+                                <div class="border-l-4 border-primary-500 pl-4">
+                                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Unit 2: Molecular and Ionic Compound Structure and Properties</h3>
+                                    <a href="https://docs.google.com/document/d/1PwvdWnC10VyzdHLlUvTE-mbvoDjCI95OcIlX3xENTLI/edit?tab=t.0#heading=h.eygvk6wu2q1i" >Notes</a>
+                                    <ul class="list-disc list-inside text-gray-600 space-y-1 ml-4">
+                                        <li>Types of chemical bonds</li>
+                                        <li>Intramolecular force and potential energy</li>
+                                        <li>Structure of ionic solids</li>
+                                        <li>Structure of metals and alloys</li>
+                                        <li>Lewis diagrams</li>
+                                    </ul>
+                                </div>
+                                <div class="border-l-4 border-primary-500 pl-4">
+                                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Unit 3: Intermolecular Forces and Properties</h3>
+                                    <ul class="list-disc list-inside text-gray-600 space-y-1 ml-4">
+                                        <li>Intermolecular forces</li>
+                                        <li>Properties of solids</li>
+                                        <li>Solids, liquids, and gases</li>
+                                        <li>Ideal gas law</li>
+                                        <li>Kinetic molecular theory</li>
+                                    </ul>
+                                </div>
+                                <div class="border-l-4 border-primary-500 pl-4">
+                                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Unit 4: Chemical Reactions</h3>
+                                    <ul class="list-disc list-inside text-gray-600 space-y-1 ml-4">
+                                        <li>Introduction for reactions</li>
+                                        <li>Net ionic equations</li>
+                                        <li>Representations of reactions</li>
+                                        <li>Physical and chemical changes</li>
+                                        <li>Stoichiometry</li>
+                                    </ul>
+                                </div>
+                                <div class="border-l-4 border-primary-500 pl-4">
+                                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Unit 5: Kinetics</h3>
+                                    <ul class="list-disc list-inside text-gray-600 space-y-1 ml-4">
+                                        <li>Reaction rates</li>
+                                        <li>Introduction to rate law</li>
+                                        <li>Elementary reactions</li>
+                                        <li>Collision model</li>
+                                        <li>Reaction energy profile</li>
+                                    </ul>
+                                </div>
+                                <div class="border-l-4 border-primary-500 pl-4">
+                                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Unit 6: Thermodynamics</h3>
+                                    <ul class="list-disc list-inside text-gray-600 space-y-1 ml-4">
+                                        <li>Endothermic and exothermic processes</li>
+                                        <li>Energy diagrams</li>
+                                        <li>Heat transfer and thermal equilibrium</li>
+                                        <li>Heat capacity and calorimetry</li>
+                                        <li>Energy of phase changes</li>
+                                    </ul>
+                                </div>
+                                <div class="border-l-4 border-primary-500 pl-4">
+                                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Unit 7: Equilibrium</h3>
+                                    <ul class="list-disc list-inside text-gray-600 space-y-1 ml-4">
+                                        <li>Introduction to equilibrium</li>
+                                        <li>Direction of reversible reactions</li>
+                                        <li>Reaction quotient and equilibrium constant</li>
+                                        <li>Calculating the equilibrium constant</li>
+                                        <li>Magnitude of the equilibrium constant</li>
+                                    </ul>
+                                </div>
+                                <div class="border-l-4 border-primary-500 pl-4">
+                                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Unit 8: Acids and Bases</h3>
+                                    <ul class="list-disc list-inside text-gray-600 space-y-1 ml-4">
+                                        <li>Introduction to acids and bases</li>
+                                        <li>pH and pOH of strong acids and bases</li>
+                                        <li>Weak acid and base equilibria</li>
+                                        <li>Acid-base reactions and buffers</li>
+                                        <li>pH and pKa</li>
+                                    </ul>
+                                </div>
+                                <div class="border-l-4 border-primary-500 pl-4">
+                                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Unit 9: Applications of Thermodynamics</h3>
+                                    <ul class="list-disc list-inside text-gray-600 space-y-1 ml-4">
+                                        <li>Introduction to entropy</li>
+                                        <li>Absolute entropy and entropy change</li>
+                                        <li>Gibbs free energy and thermodynamic favorability</li>
+                                        <li>Thermodynamic and kinetic control</li>
+                                        <li>Free energy and equilibrium</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Notes Section -->
+                    <section id="notes" class="mb-12">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">Notes</h2>
+                        <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+                            <p class="text-gray-600 mb-4">
+                                Comprehensive notes for each unit are available below. Click on a unit to access detailed notes covering all topics.
+                            </p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <a href="#" class="p-4 border border-gray-200 rounded-lg hover:border-primary-500 hover:bg-primary-50 transition-colors">
+                                    <h4 class="font-semibold text-gray-900 mb-1">Unit 1 Notes</h4>
+                                    <p class="text-sm text-gray-600">Atomic Structure and Properties</p>
+                                </a>
+                                <a href="#" class="p-4 border border-gray-200 rounded-lg hover:border-primary-500 hover:bg-primary-50 transition-colors">
+                                    <h4 class="font-semibold text-gray-900 mb-1">Unit 2 Notes</h4>
+                                    <p class="text-sm text-gray-600">Molecular and Ionic Compounds</p>
+                                </a>
+                                <a href="#" class="p-4 border border-gray-200 rounded-lg hover:border-primary-500 hover:bg-primary-50 transition-colors">
+                                    <h4 class="font-semibold text-gray-900 mb-1">Unit 3 Notes</h4>
+                                    <p class="text-sm text-gray-600">Intermolecular Forces</p>
+                                </a>
+                                <a href="#" class="p-4 border border-gray-200 rounded-lg hover:border-primary-500 hover:bg-primary-50 transition-colors">
+                                    <h4 class="font-semibold text-gray-900 mb-1">Unit 4 Notes</h4>
+                                    <p class="text-sm text-gray-600">Chemical Reactions</p>
+                                </a>
+                                <a href="#" class="p-4 border border-gray-200 rounded-lg hover:border-primary-500 hover:bg-primary-50 transition-colors">
+                                    <h4 class="font-semibold text-gray-900 mb-1">Unit 5 Notes</h4>
+                                    <p class="text-sm text-gray-600">Kinetics</p>
+                                </a>
+                                <a href="#" class="p-4 border border-gray-200 rounded-lg hover:border-primary-500 hover:bg-primary-50 transition-colors">
+                                    <h4 class="font-semibold text-gray-900 mb-1">Unit 6 Notes</h4>
+                                    <p class="text-sm text-gray-600">Thermodynamics</p>
+                                </a>
+                                <a href="#" class="p-4 border border-gray-200 rounded-lg hover:border-primary-500 hover:bg-primary-50 transition-colors">
+                                    <h4 class="font-semibold text-gray-900 mb-1">Unit 7 Notes</h4>
+                                    <p class="text-sm text-gray-600">Equilibrium</p>
+                                </a>
+                                <a href="#" class="p-4 border border-gray-200 rounded-lg hover:border-primary-500 hover:bg-primary-50 transition-colors">
+                                    <h4 class="font-semibold text-gray-900 mb-1">Unit 8 Notes</h4>
+                                    <p class="text-sm text-gray-600">Acids and Bases</p>
+                                </a>
+                                <a href="#" class="p-4 border border-gray-200 rounded-lg hover:border-primary-500 hover:bg-primary-50 transition-colors">
+                                    <h4 class="font-semibold text-gray-900 mb-1">Unit 9 Notes</h4>
+                                    <p class="text-sm text-gray-600">Applications of Thermodynamics</p>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Practice Questions Section -->
+                    <section id="practice" class="mb-12">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">Practice Questions</h2>
+                        <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+                            <p class="text-gray-600 mb-4">
+                                Test your understanding with practice questions organized by unit. Each set includes multiple-choice and free-response questions similar to the AP exam.
+                            </p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <a href="#" class="p-4 border border-gray-200 rounded-lg hover:border-secondary-500 hover:bg-secondary-50 transition-colors">
+                                    <h4 class="font-semibold text-gray-900 mb-1">Unit 1 Practice</h4>
+                                    <p class="text-sm text-gray-600">15 multiple-choice + 2 free-response</p>
+                                </a>
+                                <a href="#" class="p-4 border border-gray-200 rounded-lg hover:border-secondary-500 hover:bg-secondary-50 transition-colors">
+                                    <h4 class="font-semibold text-gray-900 mb-1">Unit 2 Practice</h4>
+                                    <p class="text-sm text-gray-600">15 multiple-choice + 2 free-response</p>
+                                </a>
+                                <a href="#" class="p-4 border border-gray-200 rounded-lg hover:border-secondary-500 hover:bg-secondary-50 transition-colors">
+                                    <h4 class="font-semibold text-gray-900 mb-1">Unit 3 Practice</h4>
+                                    <p class="text-sm text-gray-600">15 multiple-choice + 2 free-response</p>
+                                </a>
+                                <a href="#" class="p-4 border border-gray-200 rounded-lg hover:border-secondary-500 hover:bg-secondary-50 transition-colors">
+                                    <h4 class="font-semibold text-gray-900 mb-1">Unit 4 Practice</h4>
+                                    <p class="text-sm text-gray-600">15 multiple-choice + 2 free-response</p>
+                                </a>
+                                <a href="#" class="p-4 border border-gray-200 rounded-lg hover:border-secondary-500 hover:bg-secondary-50 transition-colors">
+                                    <h4 class="font-semibold text-gray-900 mb-1">Unit 5 Practice</h4>
+                                    <p class="text-sm text-gray-600">15 multiple-choice + 2 free-response</p>
+                                </a>
+                                <a href="#" class="p-4 border border-gray-200 rounded-lg hover:border-secondary-500 hover:bg-secondary-50 transition-colors">
+                                    <h4 class="font-semibold text-gray-900 mb-1">Full Practice Exam</h4>
+                                    <p class="text-sm text-gray-600">60 multiple-choice + 7 free-response</p>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Study Guides Section -->
+                    <section id="study-guides" class="mb-12">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">Study Guides</h2>
+                        <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+                            <p class="text-gray-600 mb-4">
+                                Comprehensive study guides to help you prepare for the AP Chemistry exam. These guides include key concepts, formulas, and exam strategies.
+                            </p>
+                            <div class="space-y-4">
+                                <a href="#" class="block p-4 border border-gray-200 rounded-lg hover:border-primary-500 hover:bg-primary-50 transition-colors">
+                                    <h4 class="font-semibold text-gray-900 mb-1">Complete AP Chemistry Study Guide</h4>
+                                    <p class="text-sm text-gray-600">All units covered with key concepts and formulas</p>
+                                </a>
+                                <a href="#" class="block p-4 border border-gray-200 rounded-lg hover:border-primary-500 hover:bg-primary-50 transition-colors">
+                                    <h4 class="font-semibold text-gray-900 mb-1">Formula Sheet</h4>
+                                    <p class="text-sm text-gray-600">All important formulas and constants</p>
+                                </a>
+                                <a href="#" class="block p-4 border border-gray-200 rounded-lg hover:border-primary-500 hover:bg-primary-50 transition-colors">
+                                    <h4 class="font-semibold text-gray-900 mb-1">Exam Strategy Guide</h4>
+                                    <p class="text-sm text-gray-600">Tips and strategies for the AP Chemistry exam</p>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <h3 class="text-2xl font-bold text-gradient mb-4">EduCompanion</h3>
+                    <p class="text-gray-400 mb-4 max-w-md">
+                        Your study buddy for AP classes, Honors courses, and college test prep. 
+                        Free notes and practice problems to help you succeed.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../ap-subjects.html" class="hover:text-primary-400 transition-colors">AP Subjects</a></li>
+                        <li><a href="../honors-test-prep.html" class="hover:text-primary-400 transition-colors">Honors & Test Prep</a></li>
+                        <li><a href="../about.html" class="hover:text-primary-400 transition-colors">About</a></li>
+                        <li><a href="../contact.html" class="hover:text-primary-400 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-primary-400 transition-colors">Study Guides</a></li>
+                        <li><a href="#" class="hover:text-primary-400 transition-colors">Practice Problems</a></li>
+                        <li><a href="#" class="hover:text-primary-400 transition-colors">Test Prep</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2024 EduCompanion. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/navigation.js"></script>
+</body>
+</html>
+
+
+
+
